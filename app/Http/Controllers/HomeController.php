@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class HomeController extends Controller
 {
@@ -34,5 +35,17 @@ class HomeController extends Controller
     public function avatar()
     {
         return view('config.avatar');
+    }
+/*metodo: update, tipo de dato: Request, variable: request*/
+    public function update(Request $request)
+    {
+        Log::info('Image received');
+//1er forma de guardar la imagen
+       $path = $request->file('avatarImage')->store('avatars');
+        return $path;
+//2da forma de guardar la imagen
+        /*dd($request->avatarImage);
+        $image = $request->avatarImage->store('avatars', 'public');
+        return ok;*/
     }
 }

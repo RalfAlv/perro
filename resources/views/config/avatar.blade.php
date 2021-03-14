@@ -6,9 +6,9 @@
             <div class="col-md-8">
                 <div class="card">
 
-                    <form method="post" action="#" enctype="multipart/form-data">
+                    <form method="post" action="{{route('update')}}" enctype="multipart/form-data">
                         @csrf
-                        <input type="file" name="avatar">
+                        <input type="file" name="avatarImage">
                         <input type="submit" name="submit">
                     </form>
 
