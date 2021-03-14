@@ -5,11 +5,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Que necesitas?') }}</div>
 
-                    <form method="post" action="#">
+                    <form method="post" action="#" enctype="multipart/form-data">
                         @csrf
-                        <input type="text" name="title">
+                        <input type="file" name="avatar">
                         <input type="submit" name="submit">
                     </form>
 
@@ -17,4 +16,4 @@
             </div>
         </div>
     </div>
-@endsection
+    @endsection
