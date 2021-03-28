@@ -63,8 +63,11 @@ DB_PASSWORD=<replacename>
 
 ## Instalar dependencias de javascript mediante:
 
+    composer install
     npm install
     npm run dev
+    php artisan migrate
+    php artisan storage:link
     
 Generar modelos
 
