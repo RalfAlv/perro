@@ -38,6 +38,7 @@
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
+                    <img src="{{asset('/storage/'.Auth::user()->avatar)}}"/>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

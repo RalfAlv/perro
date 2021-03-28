@@ -91,3 +91,11 @@ Ejecutar comandos de git para la cuenta en uso
     
     git status
 
+## Para actualizar todo lo nuevo hecho en git commit en otra pc
+
+    git reset --hard
+    git pull
+
+##  Para poder ver la imagen suministrada por el usuario ejecutar
+
+    php artisan storage:link

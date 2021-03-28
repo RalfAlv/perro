@@ -31,21 +31,24 @@ class HomeController extends Controller
     {
         return view('todos.todohome');
     }
-
     public function avatar()
     {
         return view('config.avatar');
     }
+
 /*metodo: update, tipo de dato: Request, variable: request*/
     public function update(Request $request)
     {
         Log::info('Image received');
-//1er forma de guardar la imagen
-       $path = $request->file('avatarImage')->store('avatars');
-        return $path;
-//2da forma de guardar la imagen
-        /*dd($request->avatarImage);
+        //2da forma de guardar la imagen
+        // dd($request->avatarImage);
         $image = $request->avatarImage->store('avatars', 'public');
-        return ok;*/
+        auth()->user()->update(['avatar' => $image]);
+        return redirect()->back();
+
+//1er forma de guardar la imagen
+      /* $path = $request->file('avatarImage')->store('avatars');
+        return $path;*/
+
     }
 }
